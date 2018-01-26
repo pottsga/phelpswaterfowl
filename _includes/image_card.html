@@ -1,0 +1,23 @@
+
+
+  {% if include.header != '' or include.description != '' %}
+
+  <div class="card col-xl-3 col-lg-4 col-sm-6 px-0 my-1">
+    <a href="{{include.image_url}}" data-toggle="lightbox" data-gallery="{{include.gallery}}" data-title="{{include.header}}">
+      <img src="{{include.image_url}}" class="card-img-top">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">{{include.header}}</h5>
+      <p class="card-text">{{include.description}}</p>
+    </div>
+  </div>
+
+  {% else %}
+
+  <div class="col-xl-3 col-lg-4 col-sm-6 px-0 my-1">
+    <a style="background-color: white; padding: 1px;" href="{{include.image_url}}" data-toggle="lightbox" data-gallery="{{include.gallery}}" data-title="{{include.header}}">
+      <img src="{{include.image_url}}" class="img-fluid" style="background-color: white; padding: 1px; border-radius: 5px;">
+    </a>
+  </div>
+
+  {% endif %}

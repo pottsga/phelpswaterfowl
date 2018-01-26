@@ -1,0 +1,153 @@
+---
+layout: base
+title: Animal Pictures
+---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+
+<style>
+#gallery>.row>a>img {
+  margin-bottom: 10px;
+}
+#gallery>.row>a>img:hover {
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.7);
+}
+.image-description {
+  color: white;
+  padding-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+</style>
+<div class="container-fluid pt-2">
+  <h1 class="my-3 pb-2">Our Animals</h1>
+  <hr>
+  <div class="row justify-content-center">
+    <div id="gallery" class="col-md-8 p-4">
+        <h3>Ducks</h3>
+        <div class="row">
+
+          {% include
+            image_card.html
+            image_url='static/img/animals/butterscotch_1.jpg'
+            header='Butterscotch Hen'
+            description='One of our Butterscotch Hens!'
+            gallery='duck_gallery'
+          %}
+
+          {% include
+            image_card.html
+            image_url='static/img/animals/butterscotch_2.jpg'
+            header='Butterscotch Drake'
+            description='One of our Butterscotch Drakes!'
+            gallery='duck_gallery'
+          %}
+
+          {% include
+            image_card.html
+            image_url='static/img/animals/call_2.jpg'
+            header=''
+            description=''
+            gallery='duck_gallery'
+          %}
+
+          {% include
+            image_card.html
+            image_url='static/img/animals/call_3.jpg'
+            header=''
+            description=''
+            gallery='duck_gallery'
+          %}
+
+          {% include
+            image_card.html
+            image_url='static/img/animals/calls.jpg'
+            header=''
+            description=''
+            gallery='duck_gallery'
+          %}
+
+          {% include
+            image_card.html
+            image_url='static/img/animals/gray.jpg'
+            header=''
+            description=''
+            gallery='duck_gallery'
+          %}
+
+          {% include
+            image_card.html
+            image_url='static/img/animals/group_calls.jpg'
+            header=''
+            description=''
+            gallery='duck_gallery'
+          %}
+
+          {% include
+            image_card.html
+            image_url='static/img/animals/runners.jpg'
+            header=''
+            description=''
+            gallery='duck_gallery'
+          %}
+
+          {% include
+            image_card.html
+            image_url='static/img/animals/white_calls_in_trough.jpg'
+            header=''
+            description=''
+            gallery='duck_gallery'
+          %}
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <hr>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-8 p-4" id="gallery">
+      <h3>Other Animals</h3>
+      <div class="row">
+        {% include
+          image_card.html
+          image_url='static/img/animals/ryder.jpeg'
+          header='Ryder &mdash; the best goat'
+          description=''
+          gallery='other_animal_gallery'
+        %}
+        {% include
+          image_card.html
+          image_url='static/img/animals/moscovy.jpg'
+          header=''
+          description=''
+          gallery='other_animal_gallery'
+        %}
+        {% include
+          image_card.html
+          image_url='static/img/animals/chickens_1.jpg'
+          header=''
+          description=''
+          gallery='other_animal_gallery'
+        %}
+        {% include
+          image_card.html
+          image_url='static/img/animals/chickens_2.jpg'
+          header=''
+          description=''
+          gallery='other_animal_gallery'
+        %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox({
+                  alwaysShowClose: true,
+                });
+            });
+</script>

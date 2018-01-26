@@ -1,0 +1,99 @@
+---
+layout: base
+title: Animal Pictures
+---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+
+<style>
+#gallery>.row>a>img {
+  margin-bottom: 10px;
+}
+#gallery>.row>a>img:hover {
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.7);
+}
+</style>
+<div class="container-fluid pt-2">
+  <h1>Property Pictures</h1>
+  <hr>
+  <div class="row justify-content-center">
+    <div id="gallery" class="col-md-8 p-4">
+        <h3>Our Farm</h3>
+        <div class="row">
+          {% include
+            image_card.html
+            image_url='static/img/property/lake_barn.jpg'
+            header=''
+            description=''
+            gallery='farm_gallery'
+          %}
+          {% include
+            image_card.html
+            image_url='static/img/property/lake.jpg'
+            header=''
+            description=''
+            gallery='farm_gallery'
+          %}
+          {% include
+            image_card.html
+            image_url='static/img/property/tractor.jpg'
+            header=''
+            description=''
+            gallery='farm_gallery'
+          %}
+          {% include
+            image_card.html
+            image_url='static/img/property/barn_outside_pens.jpg'
+            header=''
+            description=''
+            gallery='farm_gallery'
+          %}
+          {% include
+            image_card.html
+            image_url='static/img/property/lake_in_fall.jpg'
+            header=''
+            description=''
+            gallery='farm_gallery'
+          %}
+        </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-10 p-4" id="gallery">
+      <h3>New Barn Construction</h3>
+      <p>We have recently completed the building of a brand-new barn to concentrate on breeding our ducks! Equipped with a lot of automation to fill/empty duck troughs as well as siphoning water from our nearby lake, this makes our lives a lot simpler at the barn.</p>
+      <div class="row">
+        {% include
+          image_card.html
+          image_url='static/img/property/bare_lumber_barn.jpg'
+          header=''
+          description=''
+          gallery='barn_gallery'
+        %}
+        {% include
+          image_card.html
+          image_url='static/img/property/barn_inside_pens.jpg'
+          header=''
+          description=''
+          gallery='barn_gallery'
+        %}
+        {% include
+          image_card.html
+          image_url='static/img/property/lake_in_fall.jpg'
+          header=''
+          description=''
+          gallery='barn_gallery'
+        %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox({
+                  alwaysShowClose: true,
+                });
+            });
+</script>
